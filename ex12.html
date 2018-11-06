@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      function dayNightHandler(self){
+        if ($('#btn').val() === "day"){
+          Body.setBackgroundColor('black');
+          Body.setColor('white');
+          Links.setColor('red');
+          Btn.setValue('nigth');
+        } else {
+          Body.setBackgroundColor('white');
+          Body.setColor('black');
+          Links.setColor('blue');
+          Btn.setValue('day');
+        }
+      }
+
+      var Body = {
+        setBackgroundColor : function (color){
+          $('body').css('backgroundColor', color);
+        },
+        setColor : function (color){
+          $('body').css('color', color);
+        }
+      }
+
+      var Links = {
+        setColor : function (color){
+          $('a').css('color', color);
+        }
+      }
+
+      var Btn = {
+        setValue : function (val){
+          $('#btn').val(val);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1><a href="#">WEB</a></h1>
+    <h2><a href="#">HTML</a></h2>
+    <h2><a href="#">CSS</a></h2>
+    <h2><a href="#">JavaScript</a></h2>
+
+    <input type="button" name="btn" id="btn" value="day" onclick="dayNightHandler(this)">
+  </body>
+</html>
