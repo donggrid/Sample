@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript : Object</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var grades = {
+      list : {'lim':90, 'kim':70, 'lee':80},
+      show : function (){
+        for (var key in this.list){
+          console.log('key : ' + key + ' / ' + this.list[key]);
+        }
+      }
+    };
+
+    grades.show();
+  </script>
+</body>
+</html>
